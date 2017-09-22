@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:url(#SVGID_3_);}
+	.st3{fill:url(#SVGID_4_);}
+</style>
+<g>
+	<g>
+		
+			<radialGradient id="SVGID_1_" cx="21.8167" cy="57.7824" r="19.5207" gradientTransform="matrix(1 0 0 -1 0 56)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#0E90CF"/>
+			<stop  offset="1" style="stop-color:#006DAA"/>
+		</radialGradient>
+		<rect x="20.3" class="st0" width="13.3" height="20"/>
+	</g>
+	<g>
+		
+			<radialGradient id="SVGID_2_" cx="27.3855" cy="16.4381" r="24.5428" gradientTransform="matrix(1 0 0 -1 0 56)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#1A447A"/>
+			<stop  offset="0.2747" style="stop-color:#163E68"/>
+			<stop  offset="0.7215" style="stop-color:#103651"/>
+			<stop  offset="1" style="stop-color:#0E3348"/>
+		</radialGradient>
+		<polygon class="st1" points="48.7,53.3 5.3,53.3 2,40 52,40 		"/>
+	</g>
+	<g>
+		
+			<radialGradient id="SVGID_3_" cx="2.0092" cy="16.2011" r="24.6929" gradientTransform="matrix(1 0 0 -1 0 56)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#49BDEA"/>
+			<stop  offset="0.3574" style="stop-color:#2EA4DE"/>
+			<stop  offset="0.7532" style="stop-color:#178ED3"/>
+			<stop  offset="1" style="stop-color:#0E86CF"/>
+		</radialGradient>
+		<polygon class="st2" points="5.3,53.3 2,40 20.3,20 33.7,20 		"/>
+	</g>
+	<g>
+		
+			<radialGradient id="SVGID_4_" cx="37.0282" cy="32.7062" r="15.4949" gradientTransform="matrix(1 0 0 -1 0 56)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#0E90CF"/>
+			<stop  offset="1" style="stop-color:#006DAA"/>
+		</radialGradient>
+		<polygon class="st3" points="48.7,53.3 28.7,33.3 37,23.3 52,40 		"/>
+	</g>
+</g>
+</svg>

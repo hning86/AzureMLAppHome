@@ -1,0 +1,170 @@
+/* CSS Document */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: "Segoe UI Semilight", "Segoe UI", Selawik, sans-serif;
+	color: #212121;
+}
+section {
+	margin-top: 40px;
+}
+.section-hdr-img {
+	margin-right: 25px;
+}
+.banner-row {
+	background-image: url(../media/banner.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 35%;
+}
+.logo {
+	margin: 25px;
+	width: 62px;
+	height: 67px;
+}
+.site-title {
+	color: #fff;
+}
+.btn-primary {
+	border-radius: 0px;
+	border: none;
+}
+.try-btn {
+	margin: 28px 50px;
+	background-color: #ff7f00;
+}
+.try-btn:focus, .try-btn.focus {
+	background-color: #C46100;
+	border-color: transparent;
+}
+.try-btn:hover {
+	background-color: #C46100;
+	border-color: transparent;
+}
+.try-btn:active, .try-btn.active {
+	background-color: #C46100;
+	border-color: transparent;
+}
+.media {
+	margin-top: 20px;
+}
+.media:first-child {
+	margin-top: 40px;
+}
+.media.well {
+	border-radius: 0px;
+	border-color: transparent;
+	box-shadow: none;
+}
+.media-body p {
+    margin: 10px 0;
+}
+.media-left, .media>.pull-left {
+    padding-right: 25px;
+}
+p.subtitle {
+	margin-top: 0px;
+}
+footer {
+	margin-top: 100px;
+	padding-top: 30px;
+	color: #eee;
+	background-color: #535353;
+}
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6, footer .h1, footer .h2, footer .h3, footer .h4, footer .h5, footer .h6 {
+	color: #eee;
+}
+.media-hdr-top {
+	margin-top: 5px;
+}
+.left-hdr-icon {
+	float: left;
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+}
+.title-hdr {
+	display: inline;
+	margin-right: 10px;
+}
+.subtitle-hdr {
+	display: inline;
+}
+.text-group {
+	display: inline-block;
+}
+.sl{
+	font-family: "Segoe UI Semilight", "Segoe UI", Selawik, sans-serif;
+}
+.sb{
+	font-family: "Segoe UI Semibold", "Segoe UI", Selawik, sans-serif;
+}
+@font-face {
+	font-family: "Segoe UI";
+	font-weight: 200;
+	src: local("Segoe UI Light"), url(../fonts/segoeuil.ttf)
+}
+@font-face {
+	font-family: "Segoe UI";
+	font-weight: 300;
+	src: local("Segoe UI Semilight")
+}
+@font-face {
+	font-family: "Segoe UI";
+	font-weight: 400;
+	src: local("Segoe UI"), url(../fonts/segoeui.ttf)
+}
+@font-face {
+	font-family: "Segoe UI";
+	font-weight: 600;
+	src: local("Segoe UI Semibold"), url(../fonts/seguisb.ttf)
+}
+@font-face {
+	font-family: "Segoe UI";
+	font-weight: 700;
+	src: local("Segoe UI Bold"), url(../fonts/segoeuib.ttf)
+}
+@font-face {
+	font-family: "Segoe UI";
+	font-style: italic;
+	font-weight: 400;
+	src: local("Segoe UI Italic"), url(../fonts/segoeuii.ttf)
+}
+@font-face {
+	font-family: "Segoe UI";
+	font-style: italic;
+	font-weight: 700;
+	src: local("Segoe UI Bold Italic"), url(../fonts/segoeuiz.ttf)
+}
+@font-face {
+	font-family: "Segoe UI";
+	font-style: italic;
+	font-weight: 200;
+	src: local("Segoe UI Light Italic"), url(../fonts/seguili.ttf)
+}
+@font-face {
+	font-family: "Segoe UI Light";
+	src: local("Segoe UI Light"), url(../fonts/segoeuil.ttf)
+}
+@font-face {
+	font-family: "Segoe UI Semilight";
+	src: local("Segoe UI Semilight")
+}
+@font-face {
+	font-family: "Segoe UI Semibold";
+	src: local("Segoe UI Semibold"), url(../fonts/seguisb.ttf)
+}
+@font-face {
+	font-family: "Segoe UI Bold";
+	src: local("Segoe UI Bold"), url(../fonts/segoeuib.ttf)
+}
+@font-face {
+	font-family: "Segoe UI Italic";
+	src: local("Segoe UI Italic"), url(../fonts/segoeuii.ttf)
+}
+@font-face {
+	font-family: "Segoe UI Bold Italic";
+	src: local("Segoe UI Bold Italic"), url(../fonts/segoeuiz.ttf)
+}
+@font-face {
+	font-family: "Segoe UI Light Italic";
+	src: local("Segoe UI Light Italic"), url(../fonts/seguili.ttf)
+}
