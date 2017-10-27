@@ -9,6 +9,20 @@
 <link href="css/styles.min.css" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="media/logo_4oL_icon.ico"/>
 <link rel="icon" href="media/logo_4oL_icon.ico"/>
+
+<script lang="JavaScript">    
+  function showAppVersion(){
+    var ua = navigator.userAgent;
+    var patt = /AmlWorkbench\/(\S+)/;
+    var res = patt.exec(ua);
+    if ((res !== undefined) && (res !== null)) {
+      document.getElementById("appVersion").innerText = "(" + res[1] +")";
+    } else {
+      //document.getElementById("appVersion").innerText = "(unknown version)";
+    }
+  }
+</script>
+
 <style>
   a:link {
       text-decoration: none;
@@ -25,13 +39,17 @@
   a:active {
       text-decoration: underline;
   }
+  .version {
+    font-size:14px;
+  }
 </style>
 </head>
 <body>
 <div class="container-fluid">
   <div class="row banner-row">
     <div class="col-xs-12"> <img class="logo pull-left" src="media/AML-Logo.svg" width="62px" height="67px"/>
-      <h3 class="pull-left site-title sl">Azure Machine Learning Workbench (preview)</h3>
+      <h3 class="pull-left site-title sl">Azure Machine Learning Workbench <span id="appVersion" class="version"></span></h3>
+      <script lang="JavaScript">showAppVersion();</script>
       <a href="https://docs.microsoft.com/azure/machine-learning/preview/tutorial-classifying-iris-part-1" class="btn btn-primary btn-lg pull-right try-btn">TRY A TUTORIAL</a>
     </div>
   </div>
