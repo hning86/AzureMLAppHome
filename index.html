@@ -10,9 +10,12 @@
 <link rel="shortcut icon" type="image/x-icon" href="media/logo_4oL_icon.ico"/>
 <link rel="icon" href="media/logo_4oL_icon.ico"/>
 
-<script lang="JavaScript">    
-  var latestVersion = "0.1.1710.04013";
-  var latestReleaseHtml = "<a href=\"https://docs.microsoft.com/en-us/azure/machine-learning/preview/release-notes-sprint-0\">October 2017 Update</a> (" + latestVersion  + ")";
+<script lang="JavaScript">
+  var versions = {
+    "0.1.1710.04013" : "<a href=\"https://docs.microsoft.com/azure/machine-learning/preview/release-notes-sprint-0\">October 2017 Update</a> (0.1.1710.04013)",
+    //"0.1.1710.25042" : "<a href=\"https://docs.microsoft.com/azure/machine-learning/preview/release-notes-sprint-1\">November 2017 Update</a> (0.1.1710.25042)"
+  }
+  var latestReleaseVersion = "0.1.1710.04013";
 
   function getAppVersion(){
     var ua = navigator.userAgent;
@@ -25,19 +28,22 @@
 
   function showAppVersion(){
     var appVersion = getAppVersion();
-    if ((appVersion !== undefined) && (appVersion !== null)) {
+    if ((appVersion !== undefined) && (appVersion !== null)) { // found app version in user-agent header
       document.getElementById("appVersion").innerText = "(" + appVersion + ")";
 
       var releaseEventsLink = "";      
-      if (appVersion < latestVersion) {
-        releaseEventsLink = latestReleaseHtml + " is now available. Restart the app if you don't see the update notification.";
-      } else if (appVersion == latestVersion) {
-        releaseEventsLink = "See what's new in " + latestReleaseHtml + ".";
-      } else {
-        //releaseEventsLink = "Pre-release build. Release notes are not available yet.";
-        releaseEventsLink = "";
+      if (appVersion < latestReleaseVersion) { // app is older than release build, user needs to upgrade
+        releaseEventsLink = versions[latestReleaseVersion] + " is now available. Restart the app if you don't see the update notification.";
+      } else if (appVersion == latestReleaseVersion) { // app is the release build, show release notes
+        releaseEventsLink = "See what's new in " + versions[appVersion] + ".";
+      } else if (versions[appVersion] !== undefined) { // app is newer than release build and release notes found
+        releaseEventsLink = "See what's new in " + versions[appVersion];
+      } else { // app is newer than release build but no release notes found.
+        releaseEventsLink = "Prerelase build. Release notes not available yet.";
       }
       document.getElementById("releaseNotesLink").innerHTML = releaseEventsLink;
+    } else {
+      document.getElementById("appVersion").innerText = "(unkown)";
     }
   }
 </script>
