@@ -11,14 +11,33 @@
 <link rel="icon" href="media/logo_4oL_icon.ico"/>
 
 <script lang="JavaScript">    
-  function showAppVersion(){
+  var latestVersion = "0.1.1710.04013";
+  var latestReleaseHtml = "<a href=\"https://docs.microsoft.com/en-us/azure/machine-learning/preview/release-notes-sprint-0\">October 2017 Update</a> (" + latestVersion  + ")";
+
+  function getAppVersion(){
     var ua = navigator.userAgent;
     var patt = /AmlWorkbench\/(\S+)/;
     var res = patt.exec(ua);
     if ((res !== undefined) && (res !== null)) {
-      document.getElementById("appVersion").innerText = "(" + res[1] +")";
-    } else {
-      //document.getElementById("appVersion").innerText = "(unknown version)";
+      return res[1];
+    }
+  }
+
+  function showAppVersion(){
+    var appVersion = getAppVersion();
+    if ((appVersion !== undefined) && (appVersion !== null)) {
+      document.getElementById("appVersion").innerText = "(" + appVersion + ")";
+
+      var releaseEventsLink = "";      
+      if (appVersion < latestVersion) {
+        releaseEventsLink = latestReleaseHtml + " is now available. Restart the app if you don't see the update notification.";
+      } else if (appVersion == latestVersion) {
+        releaseEventsLink = "See what's new in " + latestReleaseHtml + ".";
+      } else {
+        //releaseEventsLink = "Pre-release build. Release notes are not available yet.";
+        releaseEventsLink = "";
+      }
+      document.getElementById("releaseNotesLink").innerHTML = releaseEventsLink;
     }
   }
 </script>
@@ -49,15 +68,16 @@
   <div class="row banner-row">
     <div class="col-xs-12"> <img class="logo pull-left" src="media/AML-Logo.svg" width="62px" height="67px"/>
       <h3 class="pull-left site-title sl">Azure Machine Learning Workbench <span id="appVersion" class="version"></span></h3>
-      <script lang="JavaScript">showAppVersion();</script>
+      
       <a href="https://docs.microsoft.com/azure/machine-learning/preview/tutorial-classifying-iris-part-1" class="btn btn-primary btn-lg pull-right try-btn">TRY A TUTORIAL</a>
     </div>
   </div>
   <div class="container">  
     <div class="row">    
         <div class="col-md-12">
-            <div>
-                <h5><b>October 2017 update</b> (version 0.1.1710.04013) is now available. See <a href="https://docs.microsoft.com/en-us/azure/machine-learning/preview/release-notes-sprint-0">release notes</a>.</a></h5>
+          <div>
+              <h5 id="releaseNotesLink"></h5>
+              <script lang="JavaScript">showAppVersion();</script>
             </div>
         </div>            
     </div>
@@ -352,8 +372,7 @@
     </div>
   </footer>
   <script src="js/jquery.min.js"></script> 
-  <script src="js/bootstrap.min.js"></script> 
-  <script src="js/scripts.js"></script> 
+  <script src="js/bootstrap.min.js"></script>   
 </div>
 </body>
 </html>
