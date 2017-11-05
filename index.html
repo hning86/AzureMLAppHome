@@ -11,11 +11,8 @@
 <link rel="icon" href="media/logo_4oL_icon.ico"/>
 
 <script lang="JavaScript">
-  var versions = {
-    "0.1.1710.04013" : "<a href=\"https://docs.microsoft.com/azure/machine-learning/preview/release-notes-sprint-0\">October 2017 Update</a> (0.1.1710.04013)",
-    //"0.1.1710.25042" : "<a href=\"https://docs.microsoft.com/azure/machine-learning/preview/release-notes-sprint-1\">November 2017 Update</a> (0.1.1710.25042)"
-  }
   var latestReleaseVersion = "0.1.1710.04013";
+  var latestReleaseLink = "<a href=\"https://docs.microsoft.com/azure/machine-learning/preview/release-notes-sprint-0\">October 2017 Update</a> (0.1.1710.04013)";
 
   function getAppVersion(){
     var ua = navigator.userAgent;
@@ -33,17 +30,17 @@
 
       var releaseEventsLink = "";      
       if (appVersion < latestReleaseVersion) { // app is older than release build, user needs to upgrade
-        releaseEventsLink = versions[latestReleaseVersion] + " is now available. Restart the app if you don't see the update notification.";
+        releaseEventsLink = "<span class=\"update\">" + latestReleaseLink + " is now available.</span> Clicking on the notification icon at the lower left corner of the app to install the update. Restart the app if you don't see the update notification.";
       } else if (appVersion == latestReleaseVersion) { // app is the release build, show release notes
-        releaseEventsLink = "See what's new in " + versions[appVersion] + ".";
-      } else if (versions[appVersion] !== undefined) { // app is newer than release build and release notes found
-        releaseEventsLink = "See what's new in " + versions[appVersion];
-      } else { // app is newer than release build but no release notes found.
-        releaseEventsLink = "Prerelase build. Release notes not available yet.";
+        releaseEventsLink = "See what's new in this " + latestReleaseLink + " release.";
+      } else { // app is newer than release build, release notes (if available) are hosted in private GitHub site.
+        releaseEventsLink = "<span class='update'>You are running a pre-release build.</span> Read <a href=\"https://github.com/Azure/ViennaDocs#release-notes\">draft release notes</a>.";
       }
       document.getElementById("releaseNotesLink").innerHTML = releaseEventsLink;
     } else {
-      document.getElementById("appVersion").innerText = "(unkown)";
+      // redirect page if version not detected. this means the page is not opened in Workbench.
+      window.location = "https://aka.ms/azureml-docs";
+      //document.getElementById("appVersion").innerText = "(unknown)";
     }
   }
 </script>
@@ -66,6 +63,11 @@
   }
   .version {
     font-size:14px;
+  }
+  .update {
+    font-weight: bold;
+    color: red;
+    background-color: yellow;
   }
 </style>
 </head>
@@ -346,7 +348,7 @@
         <div class="col-md-4">
           <div class="media well" style="margin:20px;">
             <div class="media-body">
-              <a href="http://azure.com/ml">
+              <a href="https://docs.microsoft.com/azure/machine-learning/preview/how-to-use-tdsp-in-azure-ml">
                 <img src="tutorials/media/01_Team Data Science Process with Vienna.png" class="img-responsive"/>
               </a>
               <h5 class="media-heading media-hdr-top"><b>Team Data Science Process Template</b></h5>
