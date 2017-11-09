@@ -11,8 +11,8 @@
 <link rel="icon" href="media/logo_4oL_icon.ico"/>
 
 <script lang="JavaScript">
-  var latestReleaseVersion = "0.1.1710.04013";
-  var latestReleaseLink = "<a href=\"https://docs.microsoft.com/azure/machine-learning/preview/release-notes-sprint-0\">October 2017 Update</a> (0.1.1710.04013)";
+  var latestReleaseVersion = "0.1.1710.31013";
+  var latestReleaseLink = "<a href='https://docs.microsoft.com/azure/machine-learning/preview/release-notes-sprint-1'>November 2017 Update</a> (0.1.1710.31013)";
 
   function getAppVersion(){
     var ua = navigator.userAgent;
@@ -34,7 +34,7 @@
       } else if (appVersion == latestReleaseVersion) { // app is the release build, show release notes
         releaseEventsLink = "See what's new in this " + latestReleaseLink + " release.";
       } else { // app is newer than release build, release notes (if available) are hosted in private GitHub site.
-        releaseEventsLink = "<span class='update'>You are running a pre-release build.</span> Read <a href=\"https://github.com/Azure/ViennaDocs#release-notes\">draft release notes</a>.";
+        releaseEventsLink = "<span>You are running a pre-release build.</span> Release notes not available yet.";
       }
       document.getElementById("releaseNotesLink").innerHTML = releaseEventsLink;
     } else {
