@@ -30,7 +30,7 @@
 
       var releaseEventsLink = "";      
       if (appVersion < latestReleaseVersion) { // app is older than release build, user needs to upgrade
-        releaseEventsLink = "<span class=\"update\">" + latestReleaseLink + " is now available.</span> Clicking on the notification icon at the lower left corner of the app to install the update. Restart the app if you don't see the update notification.";
+        releaseEventsLink = "<span class=\"update\">" + latestReleaseLink + " is now available.</span> If you don't see update notification, <a href='https://docs.microsoft.com/azure/machine-learning/preview/known-issues-and-troubleshooting-guide#cant-update-workbench'>read more...</a>";
       } else if (appVersion == latestReleaseVersion) { // app is the release build, show release notes
         releaseEventsLink = "See what's new in this " + latestReleaseLink + " release.";
       } else { // app is newer than release build, release notes (if available) are hosted in private GitHub site.
