@@ -11,8 +11,8 @@
 <link rel="icon" href="media/logo_4oL_icon.ico"/>
 
 <script lang="JavaScript">
-  var latestReleaseVersion = "0.1.1710.31013";
-  var latestReleaseLink = "<a href='https://docs.microsoft.com/azure/machine-learning/preview/release-notes-sprint-1'>November 2017 Update</a> (0.1.1710.31013)";
+  var latestReleaseVersion = "0.1.1711.15263";
+  var latestReleaseLink = "<a href='https://docs.microsoft.com/azure/machine-learning/preview/release-notes-sprint-2'>December 2017 Update</a> (0.1.1711.15263)";
 
   function getAppVersion(){
     var ua = navigator.userAgent;
@@ -32,7 +32,7 @@
       if (appVersion < latestReleaseVersion) { // app is older than release build, user needs to upgrade
         releaseEventsLink = "<span class=\"update\">" + latestReleaseLink + " is now available.</span> If you don't see update notification, <a href='https://docs.microsoft.com/azure/machine-learning/preview/known-issues-and-troubleshooting-guide#cant-update-workbench'>read more...</a>";
       } else if (appVersion == latestReleaseVersion) { // app is the release build, show release notes
-        releaseEventsLink = "See what's new in this " + latestReleaseLink + " release.";
+        releaseEventsLink = "See what's new in this " + latestReleaseLink + " release. Please note we have some <a href=\"https://docs.microsoft.com/azure/machine-learning/preview/release-notes-sprint-2#breaking-changes\">BREAKING CHANGES</a>.";
       } else { // app is newer than release build, release notes (if available) are hosted in private GitHub site.
         releaseEventsLink = "<span>You are running a pre-release build.</span> Release notes not available yet.";
       }
